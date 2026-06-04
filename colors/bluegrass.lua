@@ -51,6 +51,12 @@ local c = vim.o.background == "light"
 			icon_purple = p.purple_60,
 			icon_red = p.red_60,
 			icon_yellow = p.yellow_50,
+			fg_h1 = p.magenta_70,
+			fg_h2 = p.purple_70,
+			fg_h3 = p.blue_70,
+			fg_h4 = p.cyan_70,
+			fg_h5 = p.teal_70,
+			fg_h6 = p.green_70,
 		}
 	or {
 		fg = p.warm_gray_30,
@@ -94,6 +100,12 @@ local c = vim.o.background == "light"
 		icon_purple = p.purple_40,
 		icon_red = p.red_40,
 		icon_yellow = p.yellow_30,
+		fg_h1 = p.magenta_40,
+		fg_h2 = p.purple_40,
+		fg_h3 = p.blue_40,
+		fg_h4 = p.cyan_40,
+		fg_h5 = p.teal_40,
+		fg_h6 = p.green_40,
 	}
 
 vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
@@ -144,6 +156,26 @@ vim.api.nvim_set_hl(0, "Statusline", { fg = c.fg_statusline, bg = c.bg_statuslin
 vim.api.nvim_set_hl(0, "String", { fg = c.fg, italic = true })
 -- vim.api.nvim_set_hl(0, "String", { fg = "#42be65" })
 vim.api.nvim_set_hl(0, "Title", { bold = true })
+
+-- markdown headers (vim builtin + treesitter)
+vim.api.nvim_set_hl(0, "markdownH1", { fg = c.fg_h1, bold = true })
+vim.api.nvim_set_hl(0, "markdownH2", { fg = c.fg_h2, bold = true })
+vim.api.nvim_set_hl(0, "markdownH3", { fg = c.fg_h3, bold = true })
+vim.api.nvim_set_hl(0, "markdownH4", { fg = c.fg_h4, bold = true })
+vim.api.nvim_set_hl(0, "markdownH5", { fg = c.fg_h5, bold = true })
+vim.api.nvim_set_hl(0, "markdownH6", { fg = c.fg_h6, bold = true })
+vim.api.nvim_set_hl(0, "markdownH1Delimiter", { link = "markdownH1" })
+vim.api.nvim_set_hl(0, "markdownH2Delimiter", { link = "markdownH2" })
+vim.api.nvim_set_hl(0, "markdownH3Delimiter", { link = "markdownH3" })
+vim.api.nvim_set_hl(0, "markdownH4Delimiter", { link = "markdownH4" })
+vim.api.nvim_set_hl(0, "markdownH5Delimiter", { link = "markdownH5" })
+vim.api.nvim_set_hl(0, "markdownH6Delimiter", { link = "markdownH6" })
+vim.api.nvim_set_hl(0, "@markup.heading.1.markdown", { link = "markdownH1" })
+vim.api.nvim_set_hl(0, "@markup.heading.2.markdown", { link = "markdownH2" })
+vim.api.nvim_set_hl(0, "@markup.heading.3.markdown", { link = "markdownH3" })
+vim.api.nvim_set_hl(0, "@markup.heading.4.markdown", { link = "markdownH4" })
+vim.api.nvim_set_hl(0, "@markup.heading.5.markdown", { link = "markdownH5" })
+vim.api.nvim_set_hl(0, "@markup.heading.6.markdown", { link = "markdownH6" })
 vim.api.nvim_set_hl(0, "Type", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Visual", { bg = c.bg_visual })
 vim.api.nvim_set_hl(0, "WarningMsg", { fg = c.fg_warningmsg })
