@@ -29,6 +29,8 @@ local c = vim.o.background == "light"
 			fg_nontext = p.warm_gray_40,
 			fg_unnecessary = p.warm_gray_40,
 			fg_comment = p.teal_70,
+			fg_string = p.green_70,
+			fg_function = p.cyan_60,
 			fg_error = p.red_60,
 			fg_warn = p.yellow_60,
 			fg_info = p.cyan_70,
@@ -78,6 +80,8 @@ local c = vim.o.background == "light"
 		fg_nontext = p.warm_gray_70,
 		fg_unnecessary = p.warm_gray_70,
 		fg_comment = p.teal_60,
+		fg_string = p.green_30,
+		fg_function = p.cyan_40,
 		fg_error = p.red_40,
 		fg_warn = p.yellow_40,
 		fg_info = p.cyan_40,
@@ -128,7 +132,7 @@ vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { fg = c.fg_unnecessary })
 vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = c.fg_warn })
 vim.api.nvim_set_hl(0, "Directory", { fg = c.fg_dir })
 vim.api.nvim_set_hl(0, "ErrorMsg", { fg = c.fg_error })
-vim.api.nvim_set_hl(0, "Function", { fg = "#33b1ff" })
+vim.api.nvim_set_hl(0, "Function", { fg = c.fg_function })
 vim.api.nvim_set_hl(0, "Identifier", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Linenr", { fg = c.fg_linenr })
 vim.api.nvim_set_hl(0, "Changed", { fg = c.fg_changed })
@@ -154,7 +158,7 @@ vim.api.nvim_set_hl(0, "Spellbad", { link = "DiagnosticUnderlineError" })
 -- vim.api.nvim_set_hl(0, "Statement", { fg = "#be95ff" })
 vim.api.nvim_set_hl(0, "Statement", { fg = c.fg, bold = true })
 vim.api.nvim_set_hl(0, "Statusline", { fg = c.fg_statusline, bg = c.bg_statusline })
-vim.api.nvim_set_hl(0, "string", { fg = "#6fdc8c" })
+vim.api.nvim_set_hl(0, "String", { fg = c.fg_string })
 vim.api.nvim_set_hl(0, "Title", { bold = true })
 
 -- markdown headers (vim builtin + treesitter)
