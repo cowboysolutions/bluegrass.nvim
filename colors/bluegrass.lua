@@ -68,7 +68,7 @@ local c = vim.o.background == "light"
 		bg_float = p.teal_100,
 		bg_pmenu = p.teal_80,
 		bg_select = p.teal_70,
-		bg_code = p.teal_90,
+		bg_code = p.black,
 		bg_visual = p.blue_80,
 		bg_search = p.yellow_70,
 		fg_search = p.white,
