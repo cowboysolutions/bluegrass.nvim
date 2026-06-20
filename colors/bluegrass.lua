@@ -16,6 +16,7 @@ local c = vim.o.background == "light"
 			bg_float = p.warm_gray_20,
 			bg_pmenu = p.warm_gray_30,
 			bg_select = p.warm_gray_40,
+			bg_code = p.warm_gray_30,
 			bg_visual = p.blue_30,
 			bg_search = p.yellow_20,
 			fg_search = p.black,
@@ -67,6 +68,7 @@ local c = vim.o.background == "light"
 		bg_float = p.teal_100,
 		bg_pmenu = p.teal_80,
 		bg_select = p.teal_70,
+		bg_code = p.teal_90,
 		bg_visual = p.blue_80,
 		bg_search = p.yellow_70,
 		fg_search = p.white,
@@ -180,6 +182,10 @@ vim.api.nvim_set_hl(0, "@markup.heading.3.markdown", { link = "markdownH3" })
 vim.api.nvim_set_hl(0, "@markup.heading.4.markdown", { link = "markdownH4" })
 vim.api.nvim_set_hl(0, "@markup.heading.5.markdown", { link = "markdownH5" })
 vim.api.nvim_set_hl(0, "@markup.heading.6.markdown", { link = "markdownH6" })
+
+-- markdown inline code (`code`)
+vim.api.nvim_set_hl(0, "@markup.raw.markdown_inline", { bg = c.bg_code })
+
 vim.api.nvim_set_hl(0, "Type", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Visual", { bg = c.bg_visual })
 vim.api.nvim_set_hl(0, "WarningMsg", { fg = c.fg_warningmsg })
