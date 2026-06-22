@@ -65,7 +65,7 @@ local c = vim.o.background == "light"
 	or {
 		fg = p.warm_gray_30,
 		bg = p.teal_100,
-		bg_tab_sel = p.warm_gray_90,
+		bg_tab_sel = p.teal_90,
 		bg_dim = p.teal_100,
 		bg_float = p.teal_100,
 		bg_pmenu = p.teal_80,
