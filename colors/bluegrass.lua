@@ -12,6 +12,7 @@ local c = vim.o.background == "light"
 		and {
 			fg = p.warm_gray_100,
 			bg = p.warm_gray_20,
+			bg_tab_sel = p.warm_gray_30,
 			bg_dim = p.warm_gray_10,
 			bg_float = p.warm_gray_20,
 			bg_pmenu = p.warm_gray_30,
@@ -64,6 +65,7 @@ local c = vim.o.background == "light"
 	or {
 		fg = p.warm_gray_30,
 		bg = p.teal_100,
+		bg_tab_sel = p.teal_90,
 		bg_dim = p.teal_100,
 		bg_float = p.teal_100,
 		bg_pmenu = p.teal_80,
@@ -351,10 +353,10 @@ vim.api.nvim_set_hl(0, "MiniSurround", { link = "IncSearch" })
 -- tabline (native)
 vim.api.nvim_set_hl(0, "TabLine", { fg = c.fg_statusline, bg = c.bg })
 vim.api.nvim_set_hl(0, "TabLineFill", { bg = c.bg })
-vim.api.nvim_set_hl(0, "TabLineSel", { fg = c.fg, bg = c.bg, bold = true })
+vim.api.nvim_set_hl(0, "TabLineSel", { fg = c.fg, bg = c.bg_tab_sel, bold = true })
 
 -- mini.tabline
-vim.api.nvim_set_hl(0, "MiniTablineCurrent", { fg = c.fg, bg = c.bg, bold = true })
+vim.api.nvim_set_hl(0, "MiniTablineCurrent", { fg = c.fg, bg = c.bg_tab_sel, bold = true })
 vim.api.nvim_set_hl(0, "MiniTablineFill", { bg = c.bg })
 vim.api.nvim_set_hl(0, "MiniTablineHidden", { fg = c.fg_linenr, bg = c.bg })
 vim.api.nvim_set_hl(0, "MiniTablineModifiedCurrent", { fg = c.fg_search, bg = c.bg_search, bold = true })
