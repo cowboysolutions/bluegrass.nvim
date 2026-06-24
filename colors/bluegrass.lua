@@ -18,6 +18,7 @@ local c = vim.o.background == "light"
 			bg_pmenu = p.warm_gray_30,
 			bg_select = p.warm_gray_40,
 			fg_code = p.cyan_60,
+			fg_link = p.cyan_60,
 			bg_visual = p.blue_30,
 			bg_search = p.yellow_20,
 			fg_search = p.black,
@@ -71,6 +72,7 @@ local c = vim.o.background == "light"
 		bg_pmenu = p.teal_80,
 		bg_select = p.teal_70,
 		fg_code = p.cyan_40,
+		fg_link = p.cyan_40,
 		bg_visual = p.blue_80,
 		bg_search = p.yellow_70,
 		fg_search = p.white,
@@ -187,6 +189,14 @@ vim.api.nvim_set_hl(0, "@markup.heading.6.markdown", { link = "markdownH6" })
 
 -- markdown inline code (`code`)
 vim.api.nvim_set_hl(0, "@markup.raw.markdown_inline", { fg = c.fg_code })
+
+-- markdown links ([text](url))
+vim.api.nvim_set_hl(0, "@markup.link", { fg = c.fg_link, underline = true })
+vim.api.nvim_set_hl(0, "@markup.link.label.markdown_inline", { link = "@markup.link" })
+vim.api.nvim_set_hl(0, "@markup.link.url.markdown_inline", { link = "@markup.link" })
+vim.api.nvim_set_hl(0, "markdownLinkText", { link = "@markup.link" })
+vim.api.nvim_set_hl(0, "markdownUrl", { link = "@markup.link" })
+vim.api.nvim_set_hl(0, "markdownLink", { link = "@markup.link" })
 
 vim.api.nvim_set_hl(0, "Type", { link = "Normal" })
 vim.api.nvim_set_hl(0, "Visual", { bg = c.bg_visual })
