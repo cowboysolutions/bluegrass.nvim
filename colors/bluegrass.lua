@@ -56,6 +56,7 @@ local c = vim.o.background == "light"
 			icon_purple = p.purple_60,
 			icon_red = p.red_60,
 			icon_yellow = p.yellow_50,
+			fg_strong = p.magenta_70,
 			fg_h1 = p.magenta_70,
 			fg_h2 = p.purple_70,
 			fg_h3 = p.blue_70,
@@ -110,6 +111,7 @@ local c = vim.o.background == "light"
 		icon_purple = p.purple_40,
 		icon_red = p.red_40,
 		icon_yellow = p.yellow_30,
+		fg_strong = p.magenta_40,
 		fg_h1 = p.magenta_40,
 		fg_h2 = p.purple_40,
 		fg_h3 = p.blue_40,
@@ -189,6 +191,10 @@ vim.api.nvim_set_hl(0, "@markup.heading.6.markdown", { link = "markdownH6" })
 
 -- markdown inline code (`code`)
 vim.api.nvim_set_hl(0, "@markup.raw.markdown_inline", { fg = c.fg_code })
+
+-- markdown bold (**strong**)
+vim.api.nvim_set_hl(0, "@markup.strong", { fg = c.fg_strong, bold = true })
+vim.api.nvim_set_hl(0, "@markup.strong.markdown_inline", { link = "@markup.strong" })
 
 -- markdown links ([text](url))
 vim.api.nvim_set_hl(0, "@markup.link", { fg = c.fg_link, underline = true })
