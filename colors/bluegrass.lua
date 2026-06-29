@@ -42,6 +42,8 @@ local c = vim.o.background == "light"
 			fg_changed = p.blue_70,
 			fg_removed = p.red_60,
 			fg_dir = p.blue_70,
+			fg_member = p.blue_70,
+			fg_number = p.orange_60,
 			fg_match = p.magenta_70,
 			fg_more = p.teal_70,
 			fg_mode = p.green_70,
@@ -97,6 +99,8 @@ local c = vim.o.background == "light"
 		fg_changed = p.blue_40,
 		fg_removed = p.red_40,
 		fg_dir = p.blue_40,
+		fg_member = p.blue_40,
+		fg_number = p.orange_40,
 		fg_match = p.magenta_60,
 		fg_more = p.teal_40,
 		fg_mode = p.green_40,
@@ -121,6 +125,9 @@ local c = vim.o.background == "light"
 	}
 
 vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
+vim.api.nvim_set_hl(0, "@variable.member", { fg = c.fg_member })
+vim.api.nvim_set_hl(0, "Boolean", { fg = c.fg_number })
+vim.api.nvim_set_hl(0, "Number", { fg = c.fg_number })
 vim.api.nvim_set_hl(0, "ColorColumn", { bg = c.bg_float })
 vim.api.nvim_set_hl(0, "Comment", { fg = c.fg_comment })
 vim.api.nvim_set_hl(0, "Conceal", { bg = c.bg_select })
