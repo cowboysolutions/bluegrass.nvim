@@ -42,6 +42,7 @@ local c = vim.o.background == "light"
 			fg_changed = p.blue_70,
 			fg_removed = p.red_60,
 			fg_dir = p.blue_70,
+			fg_variable = p.blue_70,
 			fg_member = p.blue_70,
 			fg_number = p.orange_60,
 			fg_match = p.magenta_70,
@@ -99,6 +100,7 @@ local c = vim.o.background == "light"
 		fg_changed = p.blue_40,
 		fg_removed = p.red_40,
 		fg_dir = p.blue_40,
+		fg_variable = p.blue_40,
 		fg_member = p.blue_40,
 		fg_number = p.orange_40,
 		fg_match = p.magenta_60,
@@ -124,7 +126,7 @@ local c = vim.o.background == "light"
 		fg_h6 = p.green_40,
 	}
 
-vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
+vim.api.nvim_set_hl(0, "@variable", { fg = c.fg_variable })
 vim.api.nvim_set_hl(0, "@variable.member", { fg = c.fg_member })
 vim.api.nvim_set_hl(0, "Boolean", { fg = c.fg_number })
 vim.api.nvim_set_hl(0, "Number", { fg = c.fg_number })
