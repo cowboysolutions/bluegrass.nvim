@@ -42,7 +42,7 @@ local c = vim.o.background == "light"
 			fg_changed = p.blue_70,
 			fg_removed = p.red_60,
 			fg_dir = p.blue_70,
-			fg_variable = p.blue_70,
+			fg_identifier = p.blue_70,
 			fg_member = p.blue_70,
 			fg_number = p.orange_60,
 			fg_match = p.magenta_70,
@@ -100,7 +100,7 @@ local c = vim.o.background == "light"
 		fg_changed = p.blue_40,
 		fg_removed = p.red_40,
 		fg_dir = p.blue_40,
-		fg_variable = p.blue_40,
+		fg_identifier = p.blue_40,
 		fg_member = p.blue_40,
 		fg_number = p.orange_40,
 		fg_match = p.magenta_60,
@@ -126,7 +126,7 @@ local c = vim.o.background == "light"
 		fg_h6 = p.green_40,
 	}
 
-vim.api.nvim_set_hl(0, "@variable", { fg = c.fg_variable })
+vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
 vim.api.nvim_set_hl(0, "@variable.member", { fg = c.fg_member })
 vim.api.nvim_set_hl(0, "Boolean", { fg = c.fg_number })
 vim.api.nvim_set_hl(0, "Number", { fg = c.fg_number })
@@ -150,7 +150,7 @@ vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = c.fg_warn })
 vim.api.nvim_set_hl(0, "Directory", { fg = c.fg_dir })
 vim.api.nvim_set_hl(0, "ErrorMsg", { fg = c.fg_error })
 vim.api.nvim_set_hl(0, "Function", { fg = c.fg_function })
-vim.api.nvim_set_hl(0, "Identifier", { link = "Normal" })
+vim.api.nvim_set_hl(0, "Identifier", { fg = c.fg_identifier })
 vim.api.nvim_set_hl(0, "Linenr", { fg = c.fg_linenr })
 vim.api.nvim_set_hl(0, "Changed", { fg = c.fg_changed })
 vim.api.nvim_set_hl(0, "Added", { fg = c.fg_added })
